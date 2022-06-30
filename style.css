@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+body{
+
+    background-image: radial-gradient(circle, rgba(153, 187, 248, 0.49) 0%, rgb(0, 0, 0) 50%);
+    background-position: center center;
+
+}
+
+.mainAnimation{
+    animation: 1000ms linear 0s alternate-reverse both infinite running rot;
+}
+
+@keyframes rot {
+    0% {
+        background-size: 100%;
+    }
+    100% {
+        background-size: 150%;
+    }
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    border-radius: 10px;
+    color: black !important;
+}
+
+.mainText{
+    height: 100px;
+    width: 1000px;
+    font-size: 60px;
+    text-align: center;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.6));
+    font-family: 'Lobster', cursive;
+}
+
+.timer {
+    height: 150px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.timer__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    border-radius: 5px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.9));
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+}
+
+.timer__block span{
+    height: 100px;
+    width: 100px;
+    margin-top: 1rem;
+    text-align: center;
+    font-family: 'Changa', sans-serif;
+    font-size: 70px;
+}
+
+.additionalText{
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.9));
+}
+
+.clock{
+    background-image: url("clock2.svg");
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    background-clip: padding-box;
+    margin: 1rem;
+    height: 50px;
+    width: 50px;
+    padding: 1rem;
+    animation: 2000ms linear 0s alternate-reverse both infinite running rotation;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(-20deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(380deg);
+    }
+}
+
+.btn{
+    margin: 1rem;
+}
+
+.btn:focus{
+    box-shadow: none !important;
+}
